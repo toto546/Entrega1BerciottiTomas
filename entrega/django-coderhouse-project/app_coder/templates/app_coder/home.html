@@ -1,0 +1,31 @@
+{% extends "app_coder/index.html" %}
+{% load static %}
+{% block app_coder_content %}
+
+<h2>Buscador de clubes</h2>
+<hr></hr>
+
+<form action="search" method="GET">
+    <div>
+        <input type="text" name="text_search" id="clubes_name" placeholder="Busqueda por clubes">
+        <input type="submit" value="Buscar por Club">
+    </div>
+
+
+</form>
+
+<hr></hr>
+
+{% if clubes %}
+    <ul>
+        {% for clubes in clubes %}
+            <li>
+                Club: {{clubes.name}}
+                Division: {{clubes.division}}
+                Liga: {{clubes.liga}}
+            </li>
+        {% endfor %}
+    </ul>
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "app_coder/index.html" %}
+{% load static %}
+{% block app_coder_content %}
+
+<h2>Formulario para crear un nuevo Club </h2>
+<hr></hr>
+
+<form action="formCLUB" method="POST">{% csrf_token %}
+
+    <p>Club: <input type="text" name="name"></p>
+    <p>Division: <input type="text" name="division"></p>
+    <p>Liga: <input type="text" name="liga"></p>
+
+    <input type="submit" value="Crear club" >
+
+</form>
+
+{% endblock %}

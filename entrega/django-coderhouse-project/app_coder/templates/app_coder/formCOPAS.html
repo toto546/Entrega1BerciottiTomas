@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Añadir Copas </title>
+</head>
+<body>
+    <form action="formcopas" method="POST">{% csrf_token %}
+
+        <p>Copa: <input type="text" name="name"></p>
+        <p>Pais: <input type="text" name="pais"></p>
+
+        <input type="submit" value="Crear copa" >
+
+    </form>
+</body>
+</html>

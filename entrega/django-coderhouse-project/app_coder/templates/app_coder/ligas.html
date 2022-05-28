@@ -1,0 +1,16 @@
+{% extends "app_coder/index.html" %}
+{% load static %}
+{% block app_coder_content %}
+
+<h2>Lista de Ligas</h2>
+<a class="card_custom" href="{% url 'app_coder:ligasFORM' %}">Crear nueva Liga</a>
+<hr></hr>
+<ul>
+    {% for ligas in ligas %}
+        <li>
+            Liga : {{ligas.name}} Pais : {{ligas.pais}}
+        </li>
+    {% endfor %}
+</ul>
+
+{% endblock %}
