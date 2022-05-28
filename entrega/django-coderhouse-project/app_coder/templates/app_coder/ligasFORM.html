@@ -1,0 +1,22 @@
+{% extends "app_coder/index.html" %}
+{% load static %}
+{% block app_coder_content %}
+
+<h2>Formulario para insersión de una nueva Liga</h2>
+<hr></hr>
+
+    <form action="ligasform" method="POST">{% csrf_token %}
+
+        <p>Liga: <input type="text" name="name"></p>
+        <p>Pais: <input type="text" name="pais"></p>
+        
+    
+        <input type="submit" value="Crear liga" >
+    
+    </form>
+
+    
+
+
+
+{% endblock %}

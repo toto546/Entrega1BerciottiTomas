@@ -1,0 +1,18 @@
+{% extends "app_coder/index.html" %}
+{% load static %}
+{% block app_coder_content %}
+
+<h2>Lista de Clubes</h2>
+<a class="card_custom" href="{% url 'app_coder:formCLUB' %}">Crear nuevo Club</a>
+<hr>
+</hr>
+<ul>
+    {% for clubes in clubes %}
+    <li>
+        Club : {{clubes.name}} -- Division : {{clubes.division}} -- Liga: {{clubes.liga }}
+      
+    </li>
+    {% endfor %}
+</ul>
+
+{% endblock %}

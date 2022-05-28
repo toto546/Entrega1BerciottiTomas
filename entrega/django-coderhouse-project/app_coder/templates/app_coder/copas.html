@@ -1,0 +1,19 @@
+{% extends "app_coder/index.html" %}
+{% load static %}
+{% block app_coder_content %}
+
+<h2>Lista de Copas</h2>
+<a class="card_custom" href="{% url 'app_coder:formCOPAS' %}">Crear nueva Copa</a>
+<hr></hr>
+<ul>
+    {% for copas in copas %}
+        <li>
+           Nombre de la copa : {{copas.name}} --  Pais : {{copas.pais}} 
+           
+        </li>
+    
+        
+    {% endfor %}
+</ul>
+
+{% endblock %}
